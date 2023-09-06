@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Halaman utama */
+html,
+body {
+    font-family: 'Courier', sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+    background-image: url("https://wallpapercave.com/wp/wp9917503.jpg");
+    background-position: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.anak {
+    border: 3px solid rgb(40, 165, 40);
+    border-radius: 14px;
+    background: rgba(53, 201, 30, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(25px);
+    padding: 50px;
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    color: lime;
+}
+
+/* Navigasi Menu */
+
+nav {
+    position: fixed;
+    display: flex;
+    background: rgba(53, 201, 30, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: #fff;
+    height: 20px;
+    width: 100vw;
+    align-items: center;
+    border-bottom: 0.1px solid rgb(35, 136, 35);
+    transition: all 0.3s ease-in-out;
+    z-index: 300;
+}
+
+nav .logo {
+    letter-spacing: 5px;
+}
+
+nav .logo :hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: lime;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    z-index: 300;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: lime;
+    /* color: #000;
+    border-radius: 50px;
+    padding: 10px 12px; */
+}
+
+nav ul .on {
+    font-weight: bold;
+    border-bottom: 3px dashed lime;
+}
+
+
+/* Hamburger Menu */
+.menu-tombol {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-tombol input {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -15px;
+    top: -19px;
+    opacity: 0;
+    cursor: pointer;
+    background-color: #fff;
+    z-index: 300;
+}
+
+.menu-tombol span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/* Hamburger Menu Animasi */
+.menu-tombol span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-tombol span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-tombol input:checked~span:nth-child(2) {
+    background-color: lime;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-tombol input:checked~span:nth-child(4) {
+    background-color: lime;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-tombol input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 0.2rem solid #fff;
+}
+
+::selection {
+    color: red;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(53, 201, 30, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #44a050, #12570e);
+    border-radius: 10px;
+}
+
+/* .efek-mengetik {
+    overflow: hidden;
+    border-right: .15em solid;
+    white-space: nowrap;
+    animation: ketik 5s steps(50, end) forwards, kedip .8s infinite;
+    font-size: 1.6rem;
+    width: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: lime;
+}
+
+@keyframes ketik {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes kedip {
+    from {
+        border-color: transparent
+    }
+
+    to {
+        border-color: blue;
+    }
+} */
+
+
+/* Umum */
+.bungkus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+.judul {
+    margin: 20px;
+    text-align: center;
+    font-size: 40pt;
+    color: lime;
+}
+
+.judul-1 {
+    margin: 20px;
+    text-align: center;
+    font-size: 30pt;
+    color: lime;
+}
+
+.paragraf {
+    text-align: center;
+    font-size: 20pt;
+    margin: 20px;
+    color: lime;
+}
+
+/* Pilihan Tombol */
+.tombol-utama {
+    padding: 10px 16px;
+    border-radius: 25px;
+    background-color: #35c91e;
+    cursor: pointer;
+    color: black;
+    border: 2px solid #4CAF50;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tombol-utama:hover {
+    background-color: #2aa118;
+    color: #fff;
+}
+
+.tombol-kedua {
+    padding: 10px 16px;
+    border-radius: 25px;
+    background-color: #35c91e;
+    cursor: pointer;
+    color: black;
+    border: 2px solid #4CAF50;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tombol-kedua:hover {
+    background-color: #2aa118;
+    color: #fff;
+}
+
+.h3-putih {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.font-silk {
+    font-family: 'Silkscreen', cursive;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.garis-bawah {
+    border-bottom: 3px dashed #2aa118;
+}
+
+.sesuaikan {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.foto-tentang {
+    width: 250px;
+    height: 250px;
+    border-radius: 14px;
+    border: 0.2rem solid #2aa118;
+}
+
+.foto-tentang:hover {
+    transform: scale(1.2);
+    border: 0.2rem dashed lime;
+}
+
+.paragraf-tentang {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+
+/* Halaman Tabel Top 10 teman */
+table {
+    border-collapse: collapse;
+    align-items: center;
+    background-color: silver;
+    color: black;
+}
+
+td,
+th {
+    border: 1px solid green;
+    padding: 8px;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+.judul-kolom-tabel {
+    background-color: darkgreen;
+    color: white;
+}
+
+td:hover {
+    background-color: #2aa118;
+    cursor: pointer;
+}
+
+
+.isi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+.paragraf-menjorok-ratakanankiri {
+    color: #fff;
+    text-align: justify;
+    text-indent: 0.5in;
+}
+
+
+
+/* Responsive ukuran TAB / Rotation HP */
+
+@media screen and (max-width: 991.98px) {
+    nav ul {
+        width: 50%;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 0.2rem solid white;
+    }
+
+    .judul {
+        font-size: 30pt;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .judul-1 {
+        font-size: 20pt;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .paragraf {
+        text-align: center;
+        font-size: 17pt;
+        margin: 20px;
+        color: lime;
+    }
+
+    .tombol-utama {
+        padding: 10px 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: medium;
+        text-align: center;
+    }
+
+    .tombol-kedua {
+        padding: 10px 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: medium;
+        text-align: center;
+    }
+}
+
+
+/* Responsive Ukuran HP/Mobile*/
+@media screen and (max-width: 576px) {
+    img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 0.2rem solid white;
+    }
+
+    nav ul li a {
+        font-size: larger;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .menu-tombol {
+        display: flex;
+        z-index: 300;
+    }
+
+
+    nav ul {
+        position: fixed;
+        right: 25px;
+        top: 6px;
+        width: 60%;
+        height: 50vh;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(30, 121, 16, 0.95);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 200);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(17px);
+        border-radius: 10px;
+        z-index: 300;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+        border-radius: 14px;
+        border: 2px solid lime;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .anak {
+        border: 3px solid rgb(40, 165, 40);
+        border-radius: 14px;
+        background: rgba(22, 97, 11, 0.767);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(7px);
+        padding: 15px;
+        display: fixed;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        color: lime;
+    }
+
+    .paragraf-menjorok-ratakanankiri {
+        color: #fff;
+        font-size: 12pt;
+        text-align: justify;
+    }
+
+    .sesuaikan {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .foto-tentang {
+        width: 250px;
+        height: 260px;
+        border-radius: 14px;
+        border: 0.2rem solid #2aa118;
+    }
+}
